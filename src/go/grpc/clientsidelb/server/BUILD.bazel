@@ -2,17 +2,24 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_library(
     name = "server_lib",
-    srcs = ["server.go"],
-    importpath = "github.com/satreix/everest/src/go/echo/server",
+    srcs = [
+        "discovery.go",
+        "server.go",
+        "signal.go",
+    ],
+    importpath = "github.com/satreix/everest/src/go/grpc/clientsidelb/server",
     visibility = ["//visibility:private"],
     deps = [
+        "@com_github_hashicorp_consul_api//:api",
+        "@com_github_oklog_run//:run",
         "@org_golang_google_grpc//:go_default_library",
         "@org_golang_google_grpc//examples/helloworld/helloworld",
+        "@org_golang_google_grpc//reflection",
     ],
 )
 
 go_binary(
     name = "server",
     embed = [":server_lib"],
-    visibility = ["//src/go/echo:__pkg__"],
+    visibility = ["//visibility:public"],
 )
