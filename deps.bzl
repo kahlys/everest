@@ -615,11 +615,11 @@ def dependencies():
     )
     go_repository(
         name = "org_golang_google_grpc",
+        build_file_proto_mode = "disable_global",
         importpath = "google.golang.org/grpc",
         replace = "google.golang.org/grpc",
         sum = "h1:2dTRdpdFEEhJYQD8EMLB61nnrzSCTbG38PhqdhvOltg=",
         version = "v1.26.0",
-        build_file_proto_mode = "disable_global",
     )
     go_repository(
         name = "org_golang_google_protobuf",
