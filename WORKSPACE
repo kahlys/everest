@@ -121,6 +121,13 @@ http_archive(
     urls = ["https://github.com/grpc/grpc-java/archive/v%s.tar.gz" % GRPC_JAVA_VERSION],
 )
 
+http_archive(
+    name = "io_bazel_rules_dotnet",
+    urls = ["https://github.com/bazelbuild/rules_dotnet/archive/72ca6d2ccbf085ebfbf80187f2231d6f1b2ea656.tar.gz"],
+    strip_prefix = "rules_dotnet-72ca6d2ccbf085ebfbf80187f2231d6f1b2ea656",
+    sha256 = "0fe9640d9d55bd5c7ff34b8ef2257430d9d4ffc87e94e5711cbe6032d8dd6749",
+)
+
 # Import examples in its own repo as its ignored in the main repository.
 # Patch to hack visibility.
 http_archive(
@@ -215,3 +222,13 @@ rules_antlr_dependencies("4.8")
 load("@io_grpc_grpc_java//:repositories.bzl", "grpc_java_repositories")
 
 grpc_java_repositories()
+
+load("@io_bazel_rules_dotnet//dotnet:deps.bzl", "dotnet_repositories")
+
+dotnet_repositories()
+
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_register_toolchains", "dotnet_repositories_nugets")
+
+dotnet_register_toolchains()
+
+dotnet_repositories_nugets()

@@ -1,0 +1,7 @@
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "csharp_library", "csharp_binary")
+
+csharp_binary(
+    name = "hello_world.exe",
+    srcs = ["hello_world.cs"],
+    visibility = ["//visibility:public"],
+)
