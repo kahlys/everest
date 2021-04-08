@@ -59,11 +59,11 @@ http_archive(
 
 http_archive(
     name = "com_google_protobuf",
-    sha256 = "bc3dbf1f09dba1b2eb3f2f70352ee97b9049066c9040ce0c9b67fb3294e91e4b",
-    strip_prefix = "protobuf-3.15.5",
+    sha256 = "0cbdc9adda01f6d2facc65a22a2be5cecefbefe5a09e5382ee8879b522c04441",
+    strip_prefix = "protobuf-3.15.8",
     urls = [
-        "https://storage.googleapis.com/bazel-mirror/github.com/protocolbuffers/protobuf/archive/v3.15.5.tar.gz",
-        "https://github.com/protocolbuffers/protobuf/archive/v3.15.5.tar.gz",
+        "https://storage.googleapis.com/bazel-mirror/github.com/protocolbuffers/protobuf/archive/v3.15.8.tar.gz",
+        "https://github.com/protocolbuffers/protobuf/archive/v3.15.8.tar.gz",
     ],
 )
 
