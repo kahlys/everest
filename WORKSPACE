@@ -19,9 +19,9 @@ http_archive(
 
 http_archive(
     name = "rules_python",
-    sha256 = "ecd139e703b41ae2ea115f4f4229b4ea2d70bab908fb75a3b49640f976213009",
-    strip_prefix = "rules_python-6f37aa9966f53e063c41b7509a386d53a9f156c3",
-    urls = ["https://github.com/bazelbuild/rules_python/archive/6f37aa9966f53e063c41b7509a386d53a9f156c3.tar.gz"],
+    sha256 = "a8a4d791385ae08e33978bd278f2ac1151db40c0fdce9af21b37016021f9a492",
+    strip_prefix = "rules_python-1b4f61b15079d447bb7f8d11894824835e792e6c",
+    urls = ["https://github.com/bazelbuild/rules_python/archive/1b4f61b15079d447bb7f8d11894824835e792e6c.tar.gz"],
 )
 
 http_archive(
